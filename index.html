@@ -1,0 +1,96 @@
+<!DOCTYPE html>	
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>
+		Registration Form
+	</title>
+</head>
+<body>
+	<div class= "container">
+	   <h1> Registration Form</h1>
+	   <form onsubmit="return validation()">
+	   	 <input type="text" id="username" name="" placeholder="Enter Your Name"> <br>
+	   	 <span id= "errorname"></span><br>
+	   	 <input type="text" id="collegename" name="" placeholder="Enter Your College"> <br>
+	   	 <span id= "errorcollege"></span><br>
+	   	 <input type="date" name="" placeholder="Enter Date of Birth"> <br>
+	   	 <input type="text" id="branch" name="" placeholder="Enter Branch"> <br>
+	   	 <span id= "errorbranch"></span><br>
+	   	 <input type="number" id="contact" name="" placeholder="Enter Contact"> <br>
+	   	 <span id= "errorcontact"></span><br>
+	   	 <input type="text" id="email" name="" placeholder="Enter Your E-mail Id"> <br>
+	   	 <span id= "erroremail"></span><br>
+	   	 <select> 
+	   	 	<option>Enter Year of Completion</option>
+	   	 	<option> 2021 </option>
+	   	 	<option> 2022</option>
+	   	 	<option>2023</option>
+	   	 	<option>2024</option>
+	   	 </select> <br>
+	   	 <button type="submit">Register</button>
+	   	 <button type="reset">Reset</button>
+	   </form>
+	</div>
+
+<script type="text/javascript"> 
+	function validation()
+	{
+		var username = document.getElementById('username').value;
+		var collegename= document.getElementById('collegename').value;
+		var branch= document.getElementById('branch').value;
+		var contact= document.getElementById('contact').value;
+		var email= document.getElementById('email').value;
+
+
+		var usernamecheck= /^[A-Za-z]{3,30}$/;
+		var collegenamecheck = /^[A-Za-z ]{3,}$/;
+		var branchckeck= /^[A-Za-z ]{3,}$/;
+		var contactcheck= /^[6789][0-9]{9}$/;
+		var emailcheck= /^[A-Za-z_.0-9]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+
+		if(usernamecheck.test(username))
+		{
+			document.getElementById('errorname').innerHTML= "";
+		} 
+		else{
+			document.getElementById('errorname').innerHTML= "Enter valid name";
+			return false;
+		}
+
+		if(collegenamecheck.test(collegename)){
+			document.getElementById('errorcollege').innerHTML="";
+		}
+		else{
+			document.getElementById('errorcollege').innerHTML="Enter valid college name";
+			return false;
+		}
+		if(branchcheck.test(branch)){
+			document.getElementById('errorbranch').innerHTML="";
+		}
+		else{
+			document.getElementById('errorbranch').innerHTML="Enter valid branch";
+			return false;
+		}
+		if(contactcheck.test(contact)){
+			document.getElementById('errorcontact').innerHTML="";
+		}
+		else{
+			document.getElementById('errorcontact').innerHTML="Enter a valid indian number";
+			return false;
+		}
+		if(emailcheck.test(email)){
+			document.getElementById('erroremail').innerHTML="";
+		}
+		else{
+			document.getElementById('erroremail').innerHTML="Enter a valid email id";
+			return false;
+		}
+	}
+</script>
+
+</body>
+</html>

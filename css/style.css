@@ -1,0 +1,66 @@
+.container{
+	margin: 10px;
+	padding: 5px;
+	width: 80%;
+	background-color: lightgoldenrodyellow;
+}
+
+h1{
+	text-align: center;
+	color: black;
+	text-decoration: underline;
+	font-family: verdana;
+}
+
+form{
+	margin: 10px;
+	padding: 5px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px black;
+}
+
+form input{
+	margin: 10px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	border-left: 2px solid black;
+}
+
+form input:hover{
+	border-left: 4px solid red;
+}
+
+form select {
+	margin: 10px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	border-left: 2px solid black;
+}
+
+form select:hover{
+	border-left: 4px solid red;
+}
+
+form button{
+	margin: 10px;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: lightsalmon;
+	color: black;
+	text-align: center;
+}
+
+form button:hover{
+	box-shadow: 2px 2px 5px blue;
+}
+
+span{
+	font-weight: 6px;
+	color: red;
+	font-family: verdana;
+	text-align: center;
+}
